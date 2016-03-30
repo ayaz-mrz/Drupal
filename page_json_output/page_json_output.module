@@ -8,18 +8,6 @@
  */
  
 /**
- * Implements hook_permission().
- */
-function page_json_output_permission() {
-  return array(
-    'page_json_output_access' => array(
-      'title' => 'Access page json output',
-      'description' => 'Provide access for page json output.'
-    ),
-  );
-}
- 
-/**
  * Implements hook_menu().
  */
 function page_json_output_menu() {
@@ -28,7 +16,6 @@ function page_json_output_menu() {
     'title' => t('Json Output'),
     'page callback' => 'page_json_output_view',
     'page arguments' => array(1, 2),
-    'access arguments' => array('page_json_output_access'),
     'access callback' => 'page_json_output_access',
     'access arguments' => array(1, 2),
     'type' => MENU_CALLBACK,
