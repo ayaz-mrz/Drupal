@@ -1,0 +1,4 @@
+name = Page Json Output
+description = It provides a json output of a given page type node.
+core = 7.x
+package = Custom
