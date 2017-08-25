@@ -1,0 +1,5 @@
+name=Designer Gallery
+description=Custom module for civicrm designer gallery.
+core=7.x
+package=Custom
+version=VERSION

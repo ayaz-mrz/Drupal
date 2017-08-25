@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_views_query_alter().
+ **/
+function designer_gallery_views_query_alter(&$view, &$query) {
+  if ($view->name == 'designer_maker_gallery' && !count($view->args)) {
+     $query->add_tag('designer_maker_gallery_view');
+  }
+}
+
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function designer_gallery_query_designer_maker_gallery_view_alter(QueryAlterableInterface $query){
+  $query->groupBy('civicrm_contact.id');
+}
